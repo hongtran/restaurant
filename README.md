@@ -2,11 +2,11 @@
 
 **Coder Restaurant** is a Ruby on Rails restaurant website let users order foods.
 
-Submitted by: **Your Name**
+Submitted by: **Hong Tran**
 
-Time spent: **XX** hours spent in total
+Time spent: **16** hours spent in total
 
-URL: **heroku-app-url**
+URL: http://hongrestaurant.herokuapp.com/
 
 ## User Stories
 
@@ -58,7 +58,7 @@ The following **known issues**:
 
 Here's a walkthrough of implemented user stories:
 
-![Video Walkthrough](path-to-your-GIF-file)
+![http://i.imgur.com/AdczP3L.gif](path-to-your-GIF-file)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
