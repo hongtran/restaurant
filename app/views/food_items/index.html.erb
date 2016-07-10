@@ -15,6 +15,7 @@
   </thead>
 
   <tbody>
+    <% if @food_items.present? %>
     <% @food_items.each do |food_item| %>
       <tr>
         <td><%= food_item.name %></td>
@@ -26,6 +27,9 @@
         <td><%= link_to 'Edit', edit_food_item_path(food_item) %></td>
         <td><%= link_to 'Destroy', food_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+    <% end %>
+    <% else %>
+    <p>There are no food containing the term(s) <%= params[:search] %>.</p>
     <% end %>
   </tbody>
 </table>

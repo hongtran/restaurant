@@ -4,7 +4,11 @@ class FoodItemsController < ApplicationController
   # GET /food_items
   # GET /food_items.json
   def index
-    @food_items = FoodItem.all
+    if params[:search]
+      @food_items = FoodItem.search(params[:search])
+    else
+      @food_items = FoodItem.all
+    end
   end
 
   # GET /food_items/1
