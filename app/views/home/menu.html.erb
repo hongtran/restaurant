@@ -1,10 +1,10 @@
 <h1>Menu</h1>
 <div class="menu-section">
-	<div class="btn-group" role="group" aria-label="...">
+	<div class="btn-group All" role="group" aria-label="...">
 	  <%= link_to "All", menu_path(), class: 'btn btn-secondary'%>
 	</div>
 	<% Section.all.each do |section| %>
-		<div class="btn-group" role="group" aria-label="...">
+		<div class="btn-group <%= section%>" role="group" aria-label="...">
 		  <%= link_to section, menu_path(section: section), class: 'btn btn-secondary'%>
 		</div>
 	<%end%>
@@ -38,7 +38,12 @@
 </div>
 <script type="text/javascript">
 	$( document ).ready(function() {
-		$('#sort_by').val('<%= params[:sort_by]%>')
+		$('#sort_by').val('<%= params[:sort_by]%>');
+		if('<%= params[:section]%>' == '')
+			$(".All a.btn").addClass("active");
+		else
+			$(".<%= params[:section]%> a.btn").addClass("active");
+
 	    $("button.food-item").on('click', function(){
 	    	$("button.food-item").removeClass("active");
 	    	$(".card").hide();
